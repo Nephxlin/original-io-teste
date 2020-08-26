@@ -3,13 +3,16 @@
   
   --color-primary:  #DE8F75;
   --color-gray-details: #686868;
+  --color-gray-dark: #7F7F7F;
  
   --color-text: #202020;
   --color-text-secundary: #AEB6C1;
 
-  --color-button-text: #FFFFFF;
+  --color-select-title: #5F75AA;
+  --color-full-white: #FFFFFF;
   --color-header-border: #CCCCCC;
 
+  --color-main-details: #D2E1DF;
   --color-button: #32917B;
 
   font-size: 62.5%;
@@ -18,7 +21,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+
 }
 
 html, body #root{
@@ -49,6 +52,8 @@ button{
   width: 162vw;
   max-width: 1280px
 }
+
+
 
 @media (min-width:780){
   :root{

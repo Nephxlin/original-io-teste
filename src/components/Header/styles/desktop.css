@@ -1,75 +1,21 @@
-.Header{
-  position: absolute;
-  height: 60px;
-  left: 0%;
-  right: 0%;
-  top: 0px;
-}
-
-#logo{
-  height: 25px;
-  margin-top: 17px;
-  display: flex;
-  justify-content: center;
-  align-self: center;
-}
-
-.left-item-top-bar img{
-  position: absolute;
-  left: 17px;
-  right: 62px;
-  top: 21px;
-  bottom: 17px;
-  cursor: pointer;
-}
-
-.left-item-top-bar p,
-.mid-item-top-bar,
-.search-top-bar input{
-  display: none;
-}
-
-.search-top-bar{
-  position: absolute;
-  right: 59px;
-  top: 19px;
-  bottom: 18px;
-  cursor: pointer;
-}
-
-.shopping-bag-top-bar{
-  position: absolute;
-  right: 16px;
-  top: 16px;
-  bottom: 18px;
-  cursor: pointer;
-}
-
-.shopping-bag-top-bar span{
-  position: absolute;
-  right: 11px;
-  top: 11px;
-}
-
-@media (min-width: 1100px){
-  .Header{
-    position: absolute;
-  }
-    
+@media (min-width: 1000px){
     #logo{
-      margin: 26px auto ;
-      display: flex;
-      justify-content: center;
+      margin: 30px;
+      padding-left: 134px;
     }
-    
-    
+
+    #logo img{
+      height: 34px;
+    }
+     
     .top-bar{
+      border: 1px solid var(--color-header-border);
+      color: var(--color-gray-details);
       height: 50px;
       display: grid;
-      grid-template-columns: 1fr max-content 1fr 0.2fr;
+      grid-template-columns: 0.8fr 1fr 0.4fr 0.2fr;
       align-content: center;
-      border: 1px solid var(--color-header-border);
-      color: var(--color-gray-details)
+
     }
     
     .left-item-top-bar,
@@ -97,25 +43,28 @@
       font-weight: normal;
       font-size: 12px;
       line-height: 18px; 
+      margin-right: 76px;
     }
     .left-item-top-bar p{
       padding-left: 40px;
       cursor: pointer;
     }
-    
+
     #mid-content{
       display: flex;
-      justify-content: center;
-      cursor: pointer;
+      justify-self: center;
     }
     
     #mid-content p{
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
-      text-align: center;
       text-transform: uppercase;
-      padding: 0 16px;
+      padding-left: 25px;
+      padding-right: 25px;
+      justify-self: center;
+      cursor: pointer;
+      
     }
     
     .search-top-bar{
@@ -139,8 +88,8 @@
     }
     
     .shopping-bag-top-bar{
-      margin-left: 30px;
-      margin-right: 40px;
+      padding-left: 30px;
+      padding-right: 40px;
       justify-self: end;
       align-items: center;
     }

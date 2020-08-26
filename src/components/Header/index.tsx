@@ -1,10 +1,12 @@
 import React from 'react';
-import './styles.css';
 
 import logo from '../../assets/images/logo.svg';
 import search from '../../assets/icons/search.svg';
 import shoppingBag from '../../assets/icons/shopping-bag.svg';
 import menuMobile from '../../assets/icons/menu-mobile.svg'
+
+import './styles/mobile.css';
+import './styles/desktop.css';
 
 function Header() {
   return (
