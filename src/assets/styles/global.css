@@ -21,11 +21,12 @@
 * {
   margin: 0;
   padding: 0;
-
+  
 }
 
 html, body #root{
   height: 100vh;
+  
 }
 
 body {
@@ -36,17 +37,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 body,
 input{
   font-family: 'Montserrat', sans-serif;
 }
-
-button{
-  color: var(--color-button-text);
-}
-
 
 .containter{
   width: 162vw;

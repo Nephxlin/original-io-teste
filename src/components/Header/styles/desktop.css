@@ -1,11 +1,12 @@
-@media (min-width: 1000px){
+@media (min-width: 780px){
     #logo{
-      margin: 30px;
-      padding-left: 134px;
+      margin: 0 auto;
+      padding: 25px 0px 26px 148px;
     }
 
     #logo img{
       height: 34px;
+      width: 148px;
     }
      
     .top-bar{
@@ -13,8 +14,10 @@
       color: var(--color-gray-details);
       height: 50px;
       display: grid;
-      grid-template-columns: 0.8fr 1fr 0.4fr 0.2fr;
+      grid-template-columns: 0.8fr 1fr 0.3fr auto;
       align-content: center;
+      max-width: 1280px;
+      margin: 0 auto;
 
     }
     
@@ -56,12 +59,11 @@
     }
     
     #mid-content p{
-      font-style: normal;
-      font-weight: normal;
       font-size: 14px;
+      line-height: 20px;
       text-transform: uppercase;
-      padding-left: 25px;
-      padding-right: 25px;
+      padding-left: 22px;
+      padding-right: 22px;
       justify-self: center;
       cursor: pointer;
       
@@ -69,11 +71,12 @@
     
     .search-top-bar{
       border-bottom: 2px solid rgba(104, 104, 104, 0.4);
-      width: 83px;
+      width: 78px;
       padding: 7px;
       justify-self: end;
       display: flex;
       align-content: center;
+      box-sizing: border-box;
     }
     
     .search-top-bar img{
@@ -88,9 +91,8 @@
     }
     
     .shopping-bag-top-bar{
-      padding-left: 30px;
+      padding-left: 20px;
       padding-right: 40px;
-      justify-self: end;
       align-items: center;
     }
 

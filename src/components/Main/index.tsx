@@ -1,8 +1,5 @@
 import React from 'react'
 
-
-import Header from '../../components/Header'
-
 import sandalsImg from '../../assets/images/product-sandal.jpg'
 
 import arrowUp from '../../assets/icons/arrow-up.svg'
@@ -14,7 +11,7 @@ import elipseBlack from '../../assets/icons/elipse-color-black.svg'
 
 import './styles/mobile.css'
 import './styles/desktop.css'
-import './styles/fullHD.css'
+
 
 function Main(){
   return(
@@ -47,6 +44,10 @@ function Main(){
       
       
       <div className="product-photo">
+        {/* Only In Mobile ! ! ! */}
+          <h1>Rasteira tira dedo</h1>
+          <span>RT 0568 | 03.07.0653</span>
+        {/* END */}
         <img src={sandalsImg} alt="sandals" />
       </div>
 
@@ -56,9 +57,12 @@ function Main(){
           <h1>Rasteira tira dedo</h1>
           <span>RT 0568 | 03.07.0653</span>
           <div id="price">
-            <p>R$69,00 | <strong>R$ 55,20</strong></p>
-            <p>Ou 6x de R$ 9,20</p>
+            <p>R$69,00 |</p><strong>R$ 55,20</strong>
           </div>
+          <p>Ou 6x de R$ 9,20</p>
+           {/* ONLY MOBILE */}
+           <button>Adicionar à sacola</button>
+            {/* END */}
         </div>
 
         <div className="details-color">
@@ -74,7 +78,7 @@ function Main(){
         <div className="details-size">
           <div id="sizes-propertys">
             <p>Tamanho: <span>(37)</span></p>
-            <a>Guia de medidas</a>
+            <p>Guia de medidas</p>
           </div>
 
           <div id="sizes-box">
