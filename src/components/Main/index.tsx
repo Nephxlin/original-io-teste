@@ -58,11 +58,16 @@ function Main(){
           <span>RT 0568 | 03.07.0653</span>
           <div id="price">
             <p>R$69,00 |</p><strong>R$ 55,20</strong>
+            <p>Ou 6x de R$ 9,20</p>
+
           </div>
-          <p>Ou 6x de R$ 9,20</p>
-           {/* ONLY MOBILE */}
-           <button>Adicionar à sacola</button>
+            {/* ONLY MOBILE */}
+            <div id="button">
+              <button>Adicionar à sacola</button>
+            </div>
+            
             {/* END */}
+          
         </div>
 
         <div className="details-color">
@@ -97,6 +102,7 @@ function Main(){
         
         <div className="details-footer">
           <button>Adicionar à sacola</button>
+          <h3>Descrição</h3>
           <p>Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.</p>
         </div>
       </div>
