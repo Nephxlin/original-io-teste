@@ -4,7 +4,8 @@
   }
 
   .photo-viewer{
-    max-width: 1280px;
+    display: flex;
+    justify-content: center;
     margin: 0 40px;
   }
 
@@ -15,10 +16,9 @@
     font-weight: normal;
     font-size: 26px;
     line-height: 38px;
-    display: flex;
+
     text-transform: uppercase;
     justify-content: center;
-    
     margin-top: 104px;
     padding-bottom:  17px;
   }
@@ -27,7 +27,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 13px;
-    max-width: 1280px;
   }
 
   .photo-loader img{

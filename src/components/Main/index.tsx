@@ -17,12 +17,10 @@ import './styles/desktop.css'
 function Main(){
   return(
       <section className='main-section'>
-              
-        <legend> <p>Home /<strong> Sapatos</strong></p> </legend> 
-      
       <div className="show-room">
-      <div className="left-navigation">
-        
+        <div className="left-navigation">
+          <legend> <p>Home /<strong> Sapatos</strong></p> </legend> 
+
         <div className="left-nav-bar">
           <div>
             <p>Vídeo</p>
@@ -43,14 +41,15 @@ function Main(){
         </div>
       </div>
       
-      
-      <div className="product-photo">
         {/* Only In Mobile ! ! ! */}
-          <h1>Rasteira tira dedo</h1>
-          <span>RT 0568 | 03.07.0653</span>
+        <div className="product-photo">
+        
+            <h1>Rasteira tira dedo</h1>
+            <span>RT 0568 | 03.07.0653</span>
+        
+          <img src={sandalsImg} alt="sandals" />
+        </div>
         {/* END */}
-        <img src={sandalsImg} alt="sandals" />
-      </div>
 
       <div className="product-details">
         
@@ -101,15 +100,13 @@ function Main(){
           </div>
         </div>
         
-        <div className="details-footer">
-          <button>Adicionar à sacola</button>
-          <h3>Descrição</h3>
-          <p>Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.</p>
-        </div>
+          <div className="details-footer">
+            <button>Adicionar à sacola</button>
+            <h3>Descrição</h3>
+            <p>Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.</p>
+          </div>
       </div>
-
-      </div>
-      
+    </div> 
     </section>
   )
   

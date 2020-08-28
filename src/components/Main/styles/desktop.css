@@ -9,57 +9,56 @@
   display: initial;
 }
 
-
   /* Home name */
   .main-section{
-    max-width: 1280px;
-    margin: 0 40px;
+    margin: 0px 40px;
   }
 
-  .main-section legend{
-    color: var(--color-text-secundary);
-    padding-top: 10px;
+  legend{
+  color: var(--color-text-secundary);
+  font-size: 11px;
+  position: absolute;
+  top: 135px;
   }
-  .main-section legend, 
+
   .left-nav-bar p{
     font-size: 12px;    
   }
 
-
   .show-room{
-    max-width: 1280px;
-    align-content: center;
-    padding-top: 15px;
+    padding-top: 35px;
     display: grid;
     grid-template-columns: 0.3fr 1.6fr 1.8fr ;
-    align-self: center;
+    align-content: center;
+    max-width: 1280px;
+    margin: 0 auto;
   }
 
   /* Left nav bar */
 
   .left-nav-bar p{
     color: var(--color-primary);
-    margin-left: 25px;
-    margin-bottom: 10px;
+    padding-left: 25px;
+    padding-bottom: 10px;
   }
 
   .left-nav-bar #video{
     width: 82px;
     height: 45px;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
   }
 
   .scroling-content img{
     width: 82px;
     height: 93px;
-    margin-bottom: 6px;
+    padding-bottom: 6px;
   }
 
   .scroling-content img:last-child{
-    margin-bottom: 20px;
+    padding-bottom: 20px;
   }
   .scroling-content img:first-child{
-    margin-top: 20px;
+    padding-top: 20px;
   }
 
   #arrowUp,

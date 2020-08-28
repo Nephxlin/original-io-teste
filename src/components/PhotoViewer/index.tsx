@@ -16,7 +16,7 @@ import elipseBlack from '../../assets/icons/elipse-color-black.svg'
 function PhotoViewer(){
   return(
      <div className="photo-viewer">
-       
+       <div>
        <h1>Quem viu, viu também</h1>
         <div className="photo-loader">
           <img src={sandalsImg} alt="Sandals"/>
@@ -91,7 +91,7 @@ function PhotoViewer(){
         <img src={arrowRight} alt="" id="arrow"/>
       </div>
 
-     
+      </div>
      </div>
      
   )
