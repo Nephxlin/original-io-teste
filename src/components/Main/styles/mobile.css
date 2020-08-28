@@ -1,14 +1,3 @@
-.main-section{
-  position: absolute;
-  height: 50px;
-  padding-top: 10px;
-  top: 60px;
-}
-
-.left-nav-bar,
-.main-section legend{
-  display: none;
-}
 
 .show-room{
   display: grid;
@@ -24,8 +13,6 @@
 }
 
 .product-photo h1{
-  color: var(--color-primary);
-
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -33,7 +20,9 @@
 
   display: flex;
   justify-content: center;
-  text-transform: uppercase;   
+  text-transform: uppercase;
+  
+  padding-top: 15px;
 }
 
 .product-photo span{
@@ -131,10 +120,9 @@ margin-bottom: 9px;
 }
 
 .details-size #sizes-propertys p:last-child{
-  color: var(--color-primary);
   text-decoration-line: underline;
   justify-self: end;
-  padding-right: 28px;
+  padding-right: 20px;
 }
 
 #sizes-box span{
@@ -159,13 +147,7 @@ margin-bottom: 9px;
   padding-top: 34px
 }
 
-.details-header h1,
-.details-header span{
-  display: none;
-}
-
 /* PRICE AREA */
-
 
 #price{
   align-items: center;
@@ -175,7 +157,6 @@ margin-bottom: 9px;
 .details-header p:first-child{
   color:#E35442;
   text-decoration-line: line-through;
-
 }
 
 .details-header strong{
@@ -214,13 +195,27 @@ margin-bottom: 9px;
   cursor: pointer;
 }
 
-.details-footer h3{
+
+
+.details-footer h3,
+.product-photo h1,
+.details-size #sizes-propertys p:last-child{
   color: var(--color-primary)
 }
+
+.details-footer h3{
+  padding-top: 20px;
+}
+
 .details-footer p{
   font-size: 13px;
 }
-.details-footer button{
+
+.left-nav-bar,
+.main-section legend,
+.details-header h1,
+.details-header span,
+.details-footer button,
+.details-size span:first-child{
   display: none;
 }
-

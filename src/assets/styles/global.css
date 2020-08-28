@@ -12,6 +12,7 @@
   --color-full-white: #FFFFFF;
   --color-header-border: #CCCCCC;
 
+  --color-arrow-border: #2A5A75;
   --color-main-details: #D2E1DF;
   --color-button: #32917B;
 
@@ -33,12 +34,7 @@ body {
   background: var(--color-background);
 }
 
-#root {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-}
+
 
 body,
 input{

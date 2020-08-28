@@ -13,6 +13,7 @@ import './styles/mobile.css'
 import './styles/desktop.css'
 
 
+
 function Main(){
   return(
       <section className='main-section'>
@@ -108,6 +109,7 @@ function Main(){
       </div>
 
       </div>
+      
     </section>
   )
   

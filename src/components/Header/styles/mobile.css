@@ -1,18 +1,15 @@
-.Header{
-  position: absolute;
-  height: 50px;
-  left: 0px;
-  right: 0px;
-  top: 0px;
+#logo{
+  display: flex;
+  padding-top: 16px;
+  padding-bottom: 5px;
+  justify-content: center;
 }
 
-#logo{
+#logo img{
+  width: 110px;
   height: 25px;
-  margin-top: 17px;
-  display: flex;
-  justify-content: center;
-  align-self: center;
 }
+
 
 .left-item-top-bar img{
   position: absolute;
