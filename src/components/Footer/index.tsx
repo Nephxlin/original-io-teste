@@ -1,5 +1,6 @@
 import React from 'react'
 
+import './styles/mobile.css'
 import './styles/desktop.css'
 
 import facebook from '../../assets/icons/logo-facebook.svg'
@@ -8,11 +9,12 @@ import instagram from '../../assets/icons/logo-instagram.svg'
 import ebit from '../../assets/images/selo-ebit.png'
 import vtex from '../../assets/images/vtex-pci-200.png'
 import logoWhite from '../../assets/images/logo-white.svg'
+import plus from '../../assets/icons/plus.svg'
+
 
 function Footer(){
   return(
     <footer className="footer">
-
 
     <div className="footer-content">
       <div id="media">
@@ -30,21 +32,31 @@ function Footer(){
       </div>
 
       <div id="instituition">
+        <div>
           <h1>Institucional</h1>
-          <p>A Marca</p>
+          <img src={plus} alt="icon"/>
+        </div>
+          <p>A Marca </p>
           <p>Lojas</p>
           <p>Contato</p>
       </div>
 
       <div id="info">
-        <h1>Informações</h1>
+        <div>
+          <h1>Informações</h1>
+          <img src={plus} alt="icon"/>
+        </div>
+        
         <p>Formas de Pagamento</p>
         <p>Trocas e Devoluções</p>
         <p>Cuidados Com o Produto</p>
       </div>
 
       <div id="about-us">
-        <h1>Conheça</h1>
+        <div>
+          <h1>Conheça</h1>
+          <img src={plus} alt="icon"/>
+        </div>
         <p>Franquia Multimarcas</p>
         <p>Trabalhe com a Gente</p>
         <p>Procon-RJ</p>
@@ -61,7 +73,7 @@ function Footer(){
       </div>
     </div>
       <footer id="footer-info">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie massa in nunc condimentum, vel placerat lacus pulvinar. Suspendisse vel nisl eu tortor feugiat tempus vel in tortor. Nunc semper leo nec tellus gravida faucibus.</p>
+        <p>Via Mia | V. Milano Centro Comercio de Bolsas Eireli - EPP. Av.das Américas, 500 - bloco 20, loja 126 - Barra da Tijuca - Rio de Janeiro - RJ - CEP: 22640-100 CNPJ: 05.292.288/0002-10 - I.E: 86.732.548 - E-mail: ecommerce@viamia.com.br</p>
         
         <img src={logoWhite} alt="Original.io"/>
       </footer>

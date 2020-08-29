@@ -21,7 +21,7 @@
       color: var(--color-gray-details);
       height: 50px;
       display: grid;
-      grid-template-columns: 0.8fr 1fr 0.35fr auto;
+      grid-template-columns: 0.7fr 0.9fr 0.45fr 0.1fr;
       align-content: center;
       max-width: 1280px;
       margin: 0 auto;
@@ -37,10 +37,6 @@
       position: initial;
       display: flex;
       align-items: center;
-      right:0;
-      left:0;
-      top:0;
-      bottom:0
     }
     
     .left-item-top-bar img{
@@ -53,7 +49,7 @@
       font-weight: normal;
       font-size: 12px;
       line-height: 18px; 
-      margin-right: 76px;
+
     }
 
     .left-item-top-bar p{
@@ -70,8 +66,8 @@
       font-size: 14px;
       line-height: 20px;
       text-transform: uppercase;
-      padding-left: 22px;
-      padding-right: 22px;
+      padding-left: 20px;
+      padding-right: 45px;
       justify-self: center;
       cursor: pointer;
     }

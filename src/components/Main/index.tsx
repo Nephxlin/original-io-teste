@@ -8,23 +8,23 @@ import elipseMargenta from '../../assets/icons/elipse-color-margenta.svg'
 import elipseOcean from '../../assets/icons/elipse-color-ocean.svg'
 import elipseBrown from '../../assets/icons/elipse-color-brown.svg'
 import elipseBlack from '../../assets/icons/elipse-color-black.svg'
+import playVideo from '../../assets/icons/play-video.svg'
 
 import './styles/mobile.css'
 import './styles/desktop.css'
 
-
-
 function Main(){
   return(
       <section className='main-section'>
+
       <div className="show-room">
         <div className="left-navigation">
           <legend> <p>Home /<strong> Sapatos</strong></p> </legend> 
-
         <div className="left-nav-bar">
           <div>
-            <p>Vídeo</p>
+            <p>Vídeo</p>     
             <img id='video'src={sandalsImg} alt="sandals"/>
+            <img id='video-play'src={playVideo} alt="Play"/>   
           </div>
         
 

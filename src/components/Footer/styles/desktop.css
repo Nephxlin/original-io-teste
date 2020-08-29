@@ -1,165 +1,188 @@
-.footer-content{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  border: 2px solid var(--color-footer-line);
-  margin: 0 auto;
-  margin-top: 155px;
-  max-width: 1280px;  
+@media(min-width:780px){
+  #instituition,
+  #info,
+  #about-us{
+    grid-area: inherit;
+  }
+
+  #instituition p,
+  #info p,
+  #about-us p{
+  display: inherit;
+  margin: 0px;
 }
 
-#media{
-  padding-top: 21px;
-  margin-left: 30px;
-}
+  .footer-content{
+    grid-template-areas: unset;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
-#media-links,
-#label{
-  display: flex;
-  justify-content: center;
-}
-
-#media-links img{
-  padding-left: 20px;
-  cursor: pointer;
-}
-
-#label img{
-  padding-left: 32px;
-  padding-top: 51px;
-}
-
-#instituition,
-#about-us{
-  padding-left: 60px;
-}
-
-#info{
-  padding-left: 30px;
-}
-
-
-#instituition,
-#info,
-#about-us{
-  padding-top: 60px;
-}
-
-
-#instituition h1,
-#info h1,
-#about-us h1{
-  color: var(--color-text-secundary);
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 23px;
-
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-}
-
-#instituition p,
-#info p,
-#about-us p{
-  font-size: 14px;
-  line-height: 200%;
-  display: flex;
-  align-items: center;
-}
-
-#mailing{
-  position: relative;
-  bottom: 128px;
-  border: 2px solid var(--color-footer-line);
-  width: 293px;
-  height: 293px;
-  border-radius: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  background-color: var(--color-full-white);
-  margin-right: 30px;
-  align-content: center;
-}
-
-
-#send-mail h1{
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 163.42%;
-  display: flex;
-  text-transform: uppercase;
-  position: absolute;
-  bottom: 220px;
-  left: 10px;
-  padding: 0 7px;
-}
-
-#send-mail h1,
-#send-mail p,
-#send-mail input{
-  margin-left: 35px;
-}
-
-
-#send-mail p{
-  color: var(--color-footer-line);
-  font-size: 12px;
-  line-height: 18px;
-  display: flex;
-  align-items: center;
-}
-
-#send-mail input{
-  border: none;
-  border-bottom: 2px solid var(--color-footer-line);
-  width: 216px;
-}
-
-#send-mail input:last-of-type{
-  padding-top: 30px;
-}
-
-#send-mail input:placeholder-shown{
-  padding-bottom: 3px;
-}
-
-#send-mail button{
-  background-color: var(--color-primary);
-  border: none;
-  border-radius: 3px;
-  color: var(--color-full-white);
-
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: normal;
-  text-transform: uppercase;
-
-  position: absolute;
-  right: 90px;
-  bottom: 30px;
-  width: 110px;
-  height: 50px;
+    border: 2px solid var(--color-footer-line);
+    margin: 0 auto;
+    margin-top: 155px;
+    max-width: 1280px;  
+  }
   
+  #media{
+    padding-top: 21px;
+    margin-left: 30px;
+  }
+  
+  #label img{
+    padding-left: 32px;
+    padding-top: 51px;
+  }
+  
+  #instituition,
+  #about-us{
+    padding-left: 60px;
+  }
+  
+  #info{
+    padding-left: 30px;
+  }
+  
+  
+  #instituition,
+  #info,
+  #about-us{
+    padding-top: 60px;
+  }
+  
+  #instituition img,
+  #info img,
+  #about-us img{
+    display: none;
+  }
+  
+  
+  #instituition h1,
+  #info h1,
+  #about-us h1{
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0px;
+    text-indent: 0px;
+  }
+  
+  #instituition p,
+  #info p,
+  #about-us p{
+    font-size: 14px;
+    line-height: 200%;
+    margin: 0px;
+  }
+  
+  #mailing{
+    position: relative;
+    bottom: 128px;
+    border: 2px solid var(--color-footer-line);
+    width: 293px;
+    height: 293px;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: var(--color-full-white);
+    margin-right: 30px;
+    align-content: center;
+  } 
+  
+  #send-mail h1{
+    color:black;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 163.42%;
+    display: flex;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 220px;
+    left: 10px;
+    padding: 0 7px;
+    margin: 0px;
+  }
+  
+  #send-mail h1,
+  #send-mail p,
+  #send-mail input{
+    margin-left: 35px;
+  }
+  
+  
+  #send-mail p{
+    color: var(--color-footer-line);
+    font-size: 12px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+  }
+  
+  #send-mail input{
+    width: initial;
+    border: none;
+    border-bottom: 2px solid var(--color-footer-line);
+    width: 216px;
+  }
+  
+    
+  #send-mail input:first-of-type{
+    width: 216px;
+    margin-bottom: 0px;
+  }
+  
+  #send-mail input:last-of-type{
+    margin-top: 30px;
+
+  }
+  
+  #send-mail input:placeholder-shown{
+    padding-bottom: 3px;
+  }
+  
+  #send-mail button{
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 3px;
+    color: var(--color-full-white);
+  
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0 auto;
+    position: absolute;
+    left: 0px;
+    right: 10px;
+    bottom: 30px;
+    width: 110px;
+    height: 50px;
+    
+  }
+  
+  #footer-info{
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: initial;
+    justify-self: center;
+    margin: 0 auto;
+    height: 60px;
+    max-width: 1280px;
+  }
+  
+  #footer-info p{
+    text-align: center;
+    align-self: center;
+    color: var(--color-full-white);
+    padding-left: 129px;
+  }
+  
+  #footer-info img{
+    padding-right: 92px;
+    padding-left: 200px;
+    margin: 0;
+
+    width: 111px;
+    height: 25px;
+  }
 }
 
-#footer-info{
-  background-color: var(--color-primary);
-  display: flex;
-  justify-self: center;
-  margin: 0 auto;
-  height: 60px;
-  max-width: 1280px;
-}
-
-#footer-info p{
-  text-align: center;
-  align-self: center;
-  color: var(--color-full-white);
-  padding-left: 129px;
-}
-
-#footer-info img{
-  padding-right: 92px;
-  padding-left: 200px;
-}

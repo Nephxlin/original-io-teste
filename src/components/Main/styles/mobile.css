@@ -216,6 +216,7 @@ margin-bottom: 9px;
 .details-header h1,
 .details-header span,
 .details-footer button,
-.details-size span:first-child{
+.details-size span:first-child,
+#video-play{
   display: none;
 }

@@ -1,0 +1,185 @@
+.footer-content{
+  display:grid;
+  margin-top: 60px;
+  grid-template-areas:
+  "instituition" 
+  "info" 
+  "about-us" 
+  "footer";
+  border-top: 2px solid var(--color-footer-line);
+}
+
+#instituition{
+  grid-area: instituition;
+}
+
+#info{
+  grid-area: info
+}
+#about-us{
+  grid-area: about-us;
+}
+
+#instituition,
+#info,
+#about-us{
+  color: var(--color-text-secundary);
+  border-bottom: 1px solid var(--color-footer-line);
+}
+
+#instituition div,
+#info div,
+#about-us div{
+  display: flex;
+  justify-content: space-between;
+}
+
+#instituition img,
+#info img,
+#about-us img{
+  cursor: pointer;
+  padding-right: 15px;
+}
+
+
+
+#instituition h1,
+#info h1,
+#about-us h1{  
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 23px;
+  text-transform: uppercase;
+  text-indent: 15px;
+}
+
+#instituition p,
+#info p,
+#about-us p{
+  display: none;
+  color: black;
+  font-size: 14px;
+  line-height: 200%;
+  display: flex;
+  align-items: center;
+  margin: 0 40px;
+}
+
+
+#instituition p,
+#info p,
+#about-us p{
+  display: none
+}
+
+#media{
+  margin: 0 auto;
+  padding-top: 21px;
+}
+
+#media-links,
+#label,
+#send-mail h1{
+  display: flex;
+  justify-content: center;
+}
+
+#media-links img{
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+
+#label img{
+  padding-top: 30px;
+}
+
+
+#send-mail h1{
+  color: var(--color-text-secundary);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 163.42%;
+  display: flex;
+  text-transform: uppercase;
+  margin-top: 31px;
+}
+
+#send-mail p{
+  color: rgba(32, 32, 32, 0.5);
+  font-size: 12px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+}
+
+#send-mail input{
+  border: none;
+  border-bottom: 2px solid var(--color-footer-line);
+  
+  width: 200px;
+  align-items: center;
+  
+  padding-bottom: 1px;
+  margin-left: 15px;
+ 
+}
+
+#send-mail input:first-of-type{
+  width: 290px;
+  margin-bottom: 5px;
+}
+#send-mail input:last-of-type{
+  margin-top: 15px;
+  margin-right: auto;
+}
+
+
+#send-mail input:placeholder-shown{
+  padding-bottom: 3px;
+}
+
+#send-mail button{
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 3px;
+  color: var(--color-full-white);
+
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  position: relative;
+  
+  left: 10px;
+  bottom: 7px;
+  width: 80px;
+  height: 40px; 
+
+  margin-top: 10px;
+  margin-bottom: 38px; 
+}
+
+#footer-info{
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column; 
+  margin: 0 auto;
+}
+
+#footer-info p{
+  color: var(--color-full-white);
+  text-align: left;
+  align-self: center;
+  margin: 20px 15px;
+}
+
+#footer-info img{
+  display: flex;
+  align-self: center;
+  width: 94px;
+  height: 21px;
+  margin-bottom: 17px;
+}
+
