@@ -72,6 +72,20 @@
   display: none
 }
 
+p#Enable-info{
+  display: inherit;
+  margin-left: 15px;
+}
+
+p#Enable-About-us{
+  display: inherit;
+  margin-left: 15px;
+}
+p#Enable-showInstitutional{
+  display: inherit;
+  margin-left: 15px;
+}
+
 #media{
   margin: 0 auto;
   padding-top: 21px;

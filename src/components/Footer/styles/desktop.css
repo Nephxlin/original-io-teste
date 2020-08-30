@@ -3,6 +3,7 @@
   #info,
   #about-us{
     grid-area: inherit;
+    border-bottom: none;
   }
 
   #instituition p,
@@ -16,7 +17,7 @@
     grid-template-areas: unset;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    border-top: none;
+    
     border: 2px solid var(--color-footer-line);
     margin: 0 auto;
     margin-top: 155px;
@@ -156,7 +157,7 @@
     bottom: 30px;
     width: 110px;
     height: 50px;
-    
+    cursor: pointer;
   }
   
   #footer-info{

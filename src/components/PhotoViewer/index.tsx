@@ -89,7 +89,8 @@ function PhotoViewer(){
 
       <div className="arrow-box">
         <img src={arrowLeft }alt="" id="arrow"/>
-        <p>1 de 3</p>
+          <p id="arrow-box-desktop">1 de 3</p>
+          <p id="arrow-box-mobile">1 de 10</p>
         <img src={arrowRight} alt="" id="arrow"/>
       </div>
 

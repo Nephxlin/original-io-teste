@@ -213,6 +213,7 @@
     border: 1px solid #EBEBEB;
     margin-right: 3px;
     padding: 7px 8px 4px 9px;
+    cursor: pointer;
   }
 
   /* Green Button */

@@ -78,11 +78,19 @@
     border: 2px solid var(--color-arrow-border);
     padding: 8px;
     border-radius: 100%;
+    cursor: pointer;
   }
 
   #arrow img{
     width: 14px;
     height: 8px;
-    cursor: pointer;
   }
+  #arrow-box-desktop{
+    display: initial;
+  }
+  #arrow-box-mobile{
+    display: none;
+  }
+  
+  
 }

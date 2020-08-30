@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState}from 'react'
 
 import './styles/mobile.css'
 import './styles/desktop.css'
@@ -12,7 +12,27 @@ import logoWhite from '../../assets/images/logo-white.svg'
 import plus from '../../assets/icons/plus.svg'
 
 
+
+
 function Footer(){
+  
+  //Mobile Footer Plus click
+  const [showInfo,setShowInfo] = useState('Disable') 
+  const [showInstitutional,setShowInstitutional] = useState('Disable')
+  const [showAboutUs,setShowAboutUs] = useState('Disable')
+
+  function handleShowInfo(props:string){
+    if(props === 'Enable-info'){
+      return setShowInfo(props)
+    } 
+    if(props === 'Enable-showInstitutional'){
+      return setShowInstitutional(props)
+    }
+    if(props === 'Enable-About-us'){
+      return setShowAboutUs(props)
+    }
+  }
+
   return(
     <footer className="footer">
 
@@ -34,32 +54,32 @@ function Footer(){
       <div id="instituition">
         <div>
           <h1>Institucional</h1>
-          <img src={plus} alt="icon"/>
+          <img src={plus} alt="icon" onClick={() => handleShowInfo('Enable-showInstitutional') }/>
         </div>
-          <p>A Marca </p>
-          <p>Lojas</p>
-          <p>Contato</p>
+          <p id={showInstitutional}>A Marca </p>
+          <p id={showInstitutional}>Lojas</p>
+          <p id={showInstitutional}>Contato</p>
       </div>
 
       <div id="info">
         <div>
           <h1>Informações</h1>
-          <img src={plus} alt="icon"/>
+          <img src={plus} alt="icon" onClick={() => handleShowInfo('Enable-info') }/>
         </div>
         
-        <p>Formas de Pagamento</p>
-        <p>Trocas e Devoluções</p>
-        <p>Cuidados Com o Produto</p>
+        <p id={showInfo}>Formas de Pagamento</p>
+        <p id={showInfo}>Trocas e Devoluções</p>
+        <p id={showInfo}> Cuidados Com o Produto</p>
       </div>
 
       <div id="about-us">
         <div>
           <h1>Conheça</h1>
-          <img src={plus} alt="icon"/>
+          <img src={plus} alt="icon" onClick={() => handleShowInfo('Enable-About-us') }/>
         </div>
-        <p>Franquia Multimarcas</p>
-        <p>Trabalhe com a Gente</p>
-        <p>Procon-RJ</p>
+        <p id={showAboutUs}>Franquia Multimarcas</p>
+        <p id={showAboutUs}>Trabalhe com a Gente</p>
+        <p id={showAboutUs}>Procon-RJ</p>
       </div>
 
       <div id="mailing">
