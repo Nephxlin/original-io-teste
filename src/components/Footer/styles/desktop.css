@@ -16,7 +16,7 @@
     grid-template-areas: unset;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
+    border-top: none;
     border: 2px solid var(--color-footer-line);
     margin: 0 auto;
     margin-top: 155px;

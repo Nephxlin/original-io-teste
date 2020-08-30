@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
+
+import ModalAdd from '../ModalAdd'
 
 import sandalsImg from '../../assets/images/product-sandal.jpg'
+import bagImg from '../../assets/images/product-bag.jpg'
+import leatherBagImg from '../../assets/images/product-bag.jpg'
+import chromeSandalsImg from '../../assets/images/product-chrome-sandals.png'
 
 import arrowUp from '../../assets/icons/arrow-up.svg'
 import arrowDown from '../../assets/icons/arrow-down.svg'
-import elipseMargenta from '../../assets/icons/elipse-color-margenta.svg'
+import elipseFuscia from '../../assets/icons/elipse-color-fuscia.svg'
 import elipseOcean from '../../assets/icons/elipse-color-ocean.svg'
 import elipseBrown from '../../assets/icons/elipse-color-brown.svg'
 import elipseBlack from '../../assets/icons/elipse-color-black.svg'
@@ -14,7 +19,113 @@ import './styles/mobile.css'
 import './styles/desktop.css'
 
 function Main(){
+  
+  // Get Color
+  const [colorName,setColorName] = useState('Fuscia')
+
+  const [colorOptions, setColorOptions] = useState([
+    { 
+      cor: elipseFuscia,
+      name: 'Fuscia',
+      selected: 'Enable'
+    },
+    {
+      cor: elipseOcean,
+      name: 'Oceano',
+      selected: 'Disable'
+    },
+    {
+      cor: elipseBrown,
+      name: 'Marrom',
+      selected: 'Disable'
+    },
+    {
+      cor: elipseBlack,
+      name: 'Preto',
+      selected: 'Disable'
+    },
+  ])
+
+  function handleSelectColor(props:string, index:number){   
+    for(let item in colorOptions){
+      colorOptions[item].selected = 'Disable'
+    }
+    if(colorOptions[index].name === props){
+      return colorOptions[index].selected = 'Enable'
+    }
+  }
+
+  function handleSetColor(props:string, index:number){
+    setColorName(props)
+    handleSelectColor(props, index)
+  }
+
+  //Get Size
+  const [sizeTitle, setSizeTitle] = useState('37')
+  const [sizeOptions, setSizeOptions] = useState([
+    {
+      size: '33',
+      selected: 'Disable'
+    },
+    {
+      size: '34',
+      selected: 'Disable'
+    },
+    {
+      size: '35',
+      selected: 'Disable'
+    },
+    {
+      size: '36',
+      selected: 'Disable'
+    },
+    {
+      size: '37',
+      selected: 'Enable'
+    },
+    {
+      size: '38',
+      selected: 'Disable'
+    },
+    {
+      size: '39',
+      selected: 'Disable'
+    },
+    {
+      size: '40',
+      selected: 'Disable'
+    },
+    {
+      size: '40',
+      selected: 'Disable'
+    },
+    {
+      size: '42',
+      selected: 'Disable'
+    }
+  ])
+
+  
+  function handleSelectSize(props:string, index:number){   
+   
+    for(let item in sizeOptions){
+      sizeOptions[item].selected= 'Disable'
+    }
+    if(sizeOptions[index].size === props){
+      return sizeOptions[index].selected = 'Enable'
+    }
+  }
+
+
+
+  function handleSetSize(props:string, index:number){
+    setSizeTitle(props)
+    handleSelectSize(props,index)
+  }
+
+
   return(
+
       <section className='main-section'>
 
       <div className="show-room">
@@ -31,10 +142,10 @@ function Main(){
           <img id='arrowUp'src={arrowUp} alt="Arrow Up"/>
 
           <div className="scroling-content">
+            <img src={bagImg} alt="sandals"/>
+            <img src={chromeSandalsImg} alt="bag"/>
             <img src={sandalsImg} alt="sandals"/>
-            <img src={sandalsImg} alt="sandals"/>
-            <img src={sandalsImg} alt="sandals"/>
-            <img src={sandalsImg} alt="sandals"/>
+            <img src={leatherBagImg} alt="sandals"/>
           </div>
 
           <img id='arrowDown'src={arrowDown} alt=""/>
@@ -71,37 +182,47 @@ function Main(){
         </div>
 
         <div className="details-color">
-          <p>Cor: <span>(Fuscia)</span></p>
+          <p>Cor: <span>({colorName})</span></p>
           <div id="colors-pick">
-          <img src={elipseMargenta} alt="elipse margenta"/>
-          <img src={elipseOcean} alt="elipse ocean"/>
-          <img src={elipseBrown} alt="elipse brown"/>
-          <img src={elipseBlack} alt="elipse black"/>
+
+            {colorOptions.map((color , index ) => {
+              return (
+                <img 
+                  id={color.selected}
+                  key={index} 
+                  src={color.cor} 
+                  alt={color.name}
+                  onClick={() => handleSetColor(`${color.name}`, index)}
+                />
+              )
+            })} 
           </div>
         </div>
 
         <div className="details-size">
           <div id="sizes-propertys">
-            <p>Tamanho: <span>(37)</span></p>
+            <p>Tamanho: <span>({sizeTitle})</span></p>
             <p>Guia de medidas</p>
           </div>
 
           <div id="sizes-box">
-            <span id="box">33</span>
-            <span id="box">34</span>
-            <span id="box">35</span>
-            <span id="box">36</span>
-            <span id="box">37</span>
-            <span id="box">38</span>
-            <span id="box">39</span>
-            <span id="box">40</span>
-            <span id="box">41</span>
-            <span id="box">42</span>
+            {sizeOptions.map((item, index)=>{
+              return(
+                <span 
+                key={item.size} 
+                className={`${item.selected}`}
+                id="box"
+                onClick={() => handleSetSize(`${item.size}`, index)}
+                >{item.size}
+                </span>
+              )
+            })}
           </div>
         </div>
         
           <div className="details-footer">
-            <button>Adicionar à sacola</button>
+            <button >Adicionar à sacola</button>
+
             <h3>Descrição</h3>
             <p>Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.</p>
           </div>

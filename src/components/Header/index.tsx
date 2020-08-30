@@ -44,7 +44,7 @@ function Header() {
 
        <div className="search-top-bar">
             <img src={search} alt="search"/>
-            <input type="text" value='Buscar'/>
+            <input type="text" placeholder='Buscar'/>
        </div>
        <div className="shopping-bag-top-bar">
           <img src={shoppingBag} alt="shopping bag"/>

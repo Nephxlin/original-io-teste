@@ -39,7 +39,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 13px;
-    margin: auto 40px;
   }
 
   #product-info{
