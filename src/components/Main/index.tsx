@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 
-import ModalAdd from '../ModalAdd'
+import ModalAddCart from '../ModalAddCart'
 
 import sandalsImg from '../../assets/images/product-sandal.jpg'
-import bagImg from '../../assets/images/product-bag.jpg'
-import leatherBagImg from '../../assets/images/product-bag.jpg'
-import chromeSandalsImg from '../../assets/images/product-chrome-sandals.png'
+
 
 import arrowUp from '../../assets/icons/arrow-up.svg'
 import arrowDown from '../../assets/icons/arrow-down.svg'
@@ -14,6 +12,7 @@ import elipseOcean from '../../assets/icons/elipse-color-ocean.svg'
 import elipseBrown from '../../assets/icons/elipse-color-brown.svg'
 import elipseBlack from '../../assets/icons/elipse-color-black.svg'
 import playVideo from '../../assets/icons/play-video.svg'
+
 
 import './styles/mobile.css'
 import './styles/desktop.css'
@@ -142,10 +141,11 @@ function Main(){
           <img id='arrowUp'src={arrowUp} alt="Arrow Up"/>
 
           <div className="scroling-content">
-            <img src={bagImg} alt="sandals"/>
-            <img src={chromeSandalsImg} alt="bag"/>
             <img src={sandalsImg} alt="sandals"/>
-            <img src={leatherBagImg} alt="sandals"/>
+            <img src={sandalsImg} alt="sandals"/>
+            <img src={sandalsImg} alt="sandals"/>
+            <img src={sandalsImg} alt="sandals"/>
+
           </div>
 
           <img id='arrowDown'src={arrowDown} alt=""/>
@@ -209,7 +209,7 @@ function Main(){
             {sizeOptions.map((item, index)=>{
               return(
                 <span 
-                key={item.size} 
+                key={index} 
                 className={`${item.selected}`}
                 id="box"
                 onClick={() => handleSetSize(`${item.size}`, index)}
@@ -221,13 +221,16 @@ function Main(){
         </div>
         
           <div className="details-footer">
-            <button >Adicionar à sacola</button>
+            <button>Adicionar à sacola</button>
 
             <h3>Descrição</h3>
             <p>Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.</p>
           </div>
+
+          <ModalAddCart className='modal-add-card'/>
       </div>
     </div> 
+     
     </section>
   )
   

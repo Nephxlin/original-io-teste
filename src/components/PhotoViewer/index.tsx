@@ -3,7 +3,7 @@ import React from 'react'
 
 import sandalsImg from '../../assets/images/product-sandal.jpg'
 import bagImg from '../../assets/images/product-bag.jpg'
-import leatherBagImg from '../../assets/images/product-bag.jpg'
+import leatherBagImg from '../../assets/images/product-leather-bag.jpg'
 import chromeSandalsImg from '../../assets/images/product-chrome-sandals.png'
 
 
