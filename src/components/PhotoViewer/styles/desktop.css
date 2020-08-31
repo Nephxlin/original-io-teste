@@ -6,7 +6,8 @@
   .photo-viewer{
     display: flex;
     justify-content: center;
-    margin: 0 40px;
+    margin: 0;
+
   }
 
   .photo-viewer h1{

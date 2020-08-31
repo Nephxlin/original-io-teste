@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
-import ModalAddCart from '../ModalAddCart'
-
 import sandalsImg from '../../assets/images/product-sandal.jpg'
-
+import bagImg from '../../assets/images/product-bag.jpg'
+import leatherBagImg from '../../assets/images/product-leather-bag.jpg'
+import chromeSandalsImg from '../../assets/images/product-chrome-sandals.png'
 
 import arrowUp from '../../assets/icons/arrow-up.svg'
 import arrowDown from '../../assets/icons/arrow-down.svg'
@@ -12,18 +12,21 @@ import elipseOcean from '../../assets/icons/elipse-color-ocean.svg'
 import elipseBrown from '../../assets/icons/elipse-color-brown.svg'
 import elipseBlack from '../../assets/icons/elipse-color-black.svg'
 import playVideo from '../../assets/icons/play-video.svg'
-
+import closeIcon from '../../assets/icons/close.svg'
+import removeIcon from '../../assets/icons/mini-close.svg'
+import plus from '../../assets/icons/plus.svg'
+import subtract from '../../assets/icons/subtract.svg'
 
 import './styles/mobile.css'
 import './styles/desktop.css'
 
-function Main(){
-  
+function Main() {
+
   // Get Color
-  const [colorName,setColorName] = useState('Fuscia')
+  const [colorName, setColorName] = useState('Fuscia')
 
   const [colorOptions, setColorOptions] = useState([
-    { 
+    {
       cor: elipseFuscia,
       name: 'Fuscia',
       selected: 'Enable'
@@ -45,16 +48,16 @@ function Main(){
     },
   ])
 
-  function handleSelectColor(props:string, index:number){   
-    for(let item in colorOptions){
+  function handleSelectColor(props: string, index: number) {
+    for (let item in colorOptions) {
       colorOptions[item].selected = 'Disable'
     }
-    if(colorOptions[index].name === props){
+    if (colorOptions[index].name === props) {
       return colorOptions[index].selected = 'Enable'
     }
   }
 
-  function handleSetColor(props:string, index:number){
+  function handleSetColor(props: string, index: number) {
     setColorName(props)
     handleSelectColor(props, index)
   }
@@ -104,136 +107,287 @@ function Main(){
     }
   ])
 
-  
-  function handleSelectSize(props:string, index:number){   
-   
-    for(let item in sizeOptions){
-      sizeOptions[item].selected= 'Disable'
+  function handleSelectSize(props: string, index: number) {
+
+    for (let item in sizeOptions) {
+      sizeOptions[item].selected = 'Disable'
     }
-    if(sizeOptions[index].size === props){
+    if (sizeOptions[index].size === props) {
       return sizeOptions[index].selected = 'Enable'
     }
   }
 
-
-
-  function handleSetSize(props:string, index:number){
+  function handleSetSize(props: string, index: number) {
     setSizeTitle(props)
-    handleSelectSize(props,index)
+    handleSelectSize(props, index)
+  }
+
+  //Open Modal
+  const [modal, setModal] = useState('modal-add-card-disable')
+  function HandleModal(props: string) {
+    setModal(props)
   }
 
 
-  return(
+  return (
 
-      <section className='main-section'>
+    <section className='main-section'>
 
       <div className="show-room">
         <div className="left-navigation">
-          <legend> <p>Home /<strong> Sapatos</strong></p> </legend> 
-        <div className="left-nav-bar">
-          <div>
-            <p>Vídeo</p>     
-            <img id='video'src={sandalsImg} alt="sandals"/>
-            <img id='video-play'src={playVideo} alt="Play"/>   
+          <legend> <p>Home /<strong> Sapatos</strong></p> </legend>
+          <div className="left-nav-bar">
+            <div>
+              <p>Vídeo</p>
+              <img id='video' src={sandalsImg} alt="sandals" />
+              <img id='video-play' src={playVideo} alt="Play" />
+            </div>
+
+
+            <img id='arrowUp' src={arrowUp} alt="Arrow Up" />
+
+            <div className="scroling-content">
+              <img src={sandalsImg} alt="sandals" />
+              <img src={sandalsImg} alt="sandals" />
+              <img src={sandalsImg} alt="sandals" />
+              <img src={sandalsImg} alt="sandals" />
+
+            </div>
+
+            <img id='arrowDown' src={arrowDown} alt="" />
           </div>
-        
-
-          <img id='arrowUp'src={arrowUp} alt="Arrow Up"/>
-
-          <div className="scroling-content">
-            <img src={sandalsImg} alt="sandals"/>
-            <img src={sandalsImg} alt="sandals"/>
-            <img src={sandalsImg} alt="sandals"/>
-            <img src={sandalsImg} alt="sandals"/>
-
-          </div>
-
-          <img id='arrowDown'src={arrowDown} alt=""/>
         </div>
-      </div>
-      
+
         {/* Only In Mobile ! ! ! */}
         <div className="product-photo">
-        
-            <h1>Rasteira tira dedo</h1>
-            <span>RT 0568 | 03.07.0653</span>
-        
+
+          <h1>Rasteira tira dedo</h1>
+          <span>RT 0568 | 03.07.0653</span>
+
           <img src={sandalsImg} alt="sandals" />
         </div>
         {/* END */}
 
-      <div className="product-details">
-        
-        <div className="details-header">
-          <h1>Rasteira tira dedo</h1>
-          <span>RT 0568 | 03.07.0653</span>
-          <div id="price">
-            <p>R$69,00 |</p><strong>R$ 55,20</strong>
-            <p>Ou 6x de R$ 9,20</p>
+        <div className="product-details">
 
-          </div>
+          <div className="details-header">
+            <h1>Rasteira tira dedo</h1>
+            <span>RT 0568 | 03.07.0653</span>
+            <div id="price">
+              <p>R$69,00 |</p><strong>R$ 55,20</strong>
+              <p>Ou 6x de R$ 9,20</p>
+
+            </div>
             {/* ONLY MOBILE */}
             <div id="button">
-              <button>Adicionar à sacola</button>
+              <button onClick={() => HandleModal('modal-add-card')}>Adicionar à sacola</button>
             </div>
-            
+
             {/* END */}
-          
-        </div>
 
-        <div className="details-color">
-          <p>Cor: <span>({colorName})</span></p>
-          <div id="colors-pick">
-
-            {colorOptions.map((color , index ) => {
-              return (
-                <img 
-                  id={color.selected}
-                  key={index} 
-                  src={color.cor} 
-                  alt={color.name}
-                  onClick={() => handleSetColor(`${color.name}`, index)}
-                />
-              )
-            })} 
-          </div>
-        </div>
-
-        <div className="details-size">
-          <div id="sizes-propertys">
-            <p>Tamanho: <span>({sizeTitle})</span></p>
-            <p>Guia de medidas</p>
           </div>
 
-          <div id="sizes-box">
-            {sizeOptions.map((item, index)=>{
-              return(
-                <span 
-                key={index} 
-                className={`${item.selected}`}
-                id="box"
-                onClick={() => handleSetSize(`${item.size}`, index)}
-                >{item.size}
-                </span>
-              )
-            })}
+          <div className="details-color">
+            <p>Cor: <span>({colorName})</span></p>
+            <div id="colors-pick">
+
+              <div id="colors-pick">
+                {colorOptions.map((color, index) => {
+                  return (
+                    <img
+                      id={color.selected}
+                      key={index}
+                      src={color.cor}
+                      alt={color.name}
+                    />
+                  )
+                })}
+              </div>
+            </div>
           </div>
-        </div>
-        
+
+          <div className="details-size">
+            <div id="sizes-propertys">
+              <p>Tamanho: <span>({sizeTitle})</span></p>
+              <p>Guia de medidas</p>
+            </div>
+
+            <div id="sizes-box">
+              {sizeOptions.map((item, index) => {
+                return (
+                  <span
+                    key={index}
+                    className={`${item.selected}`}
+                    id="box"
+                    onClick={() => handleSetSize(`${item.size}`, index)}
+                  >{item.size}
+                  </span>
+                )
+              })}
+            </div>
+          </div>
+
           <div className="details-footer">
-            <button>Adicionar à sacola</button>
+            <button onClick={() => HandleModal('modal-add-card')}>Adicionar à sacola</button>
 
             <h3>Descrição</h3>
             <p>Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.</p>
           </div>
 
-          <ModalAddCart className='modal-add-card'/>
+          <div className={modal}>
+            <div id="modal-add-content">
+              <img
+                id='close-icon'
+                src={closeIcon}
+                alt="Close-icon"
+                onClick={() => HandleModal('modal-add-card-disable')}
+              />
+              <img id='product-photo' src={sandalsImg} alt="Sandals" />
+              <h1>Produto adicionado com sucesso!</h1>
+              <button >Finalizar compra</button>
+              <span>Continuar Comprando</span>
+            </div>
+          </div>
+
+          <div className='modal-cart-content'>
+            <div id="modal-cart">
+              <div id="cart-header">
+                <img
+                  id='cart-close-icon'
+                  src={closeIcon}
+                  alt="Close-icon"
+                  onClick={() => HandleModal('modal-add-card-disable')}
+                />
+                <h1>sacola</h1>
+                <span>5 items</span>
+              </div>
+
+              <div className="products-container">
+                <div className="cart-product">
+                  <div id="product-image">
+                    <img src={sandalsImg} alt="sandals" />
+                  </div>
+                  <div id="product-title">
+                    <h2>Rasteira Tira Dedo</h2>
+                    <strong>R$ 49,90 </strong>
+                  </div>
+                  <div id="product-quantity">
+                    <img src={subtract} alt="subtract" />
+                    <p>1</p>
+                    <img src={plus} alt="Plus" />  
+                  </div>
+                  <img src={removeIcon} alt="Remove Icon"/>
+              </div>
+
+              <div className="cart-product">
+                  <div id="product-image">
+                    <img src={bagImg} alt="sandals" />
+                  </div>
+                  <div id="product-title">
+                    <h2>Rasteira Tira Dedo</h2>
+                    <strong>R$ 49,90 </strong>
+                  </div>
+                  <div id="product-quantity">
+                    <img src={subtract} alt="subtract" />
+                    <p>1</p>
+                    <img src={plus} alt="Plus" />  
+                  </div>
+                  <img src={removeIcon} alt="Remove Icon"/>
+              </div>
+
+              <div className="cart-product">
+                  <div id="product-image">
+                    <img src={leatherBagImg} alt="sandals" />
+                  </div>
+                  <div id="product-title">
+                    <h2>Rasteira Tira Dedo</h2>
+                    <strong>R$ 49,90 </strong>
+                  </div>
+                  <div id="product-quantity">
+                    <img src={subtract} alt="subtract" />
+                    <p>1</p>
+                    <img src={plus} alt="Plus" />  
+                  </div>
+                  <img src={removeIcon} alt="Remove Icon"/>
+              </div>
+
+
+              <div className="cart-product">
+                  <div id="product-image">
+                    <img src={chromeSandalsImg} alt="sandals" />
+                  </div>
+                  <div id="product-title">
+                    <h2>Rasteira Tira Dedo</h2>
+                    <strong>R$ 49,90 </strong>
+                  </div>
+                  <div id="product-quantity">
+                    <img src={subtract} alt="subtract" />
+                    <p>1</p>
+                    <img src={plus} alt="Plus" />  
+                  </div>
+                  <img src={removeIcon} alt="Remove Icon"/>
+              </div>
+
+
+              <div className="cart-product">
+                  <div id="product-image">
+                    <img src={sandalsImg} alt="sandals" />
+                  </div>
+                  <div id="product-title">
+                    <h2>Rasteira Tira Dedo</h2>
+                    <strong>R$ 49,90 </strong>
+                  </div>
+                  <div id="product-quantity">
+                    <img src={subtract} alt="subtract" />
+                    <p>1</p>
+                    <img src={plus} alt="Plus" />  
+                  </div>
+                  <img src={removeIcon} alt="Remove Icon"/>
+              </div>
+
+              <div className="cart-product">
+                  <div id="product-image">
+                    <img src={sandalsImg} alt="sandals" />
+                  </div>
+                  <div id="product-title">
+                    <h2>Rasteira Tira Dedo</h2>
+                    <strong>R$ 49,90 </strong>
+                  </div>
+                  <div id="product-quantity">
+                    <img src={subtract} alt="subtract" />
+                    <p>1</p>
+                    <img src={plus} alt="Plus" />  
+                  </div>
+                  <img src={removeIcon} alt="Remove Icon"/>
+              </div>
+
+
+
+              
+                           
+            </div>
+            <div id="product-alert-promo">
+              <p>Faltam R$ xx,xx para você<strong>Ganhar Frete Grátis</strong></p>
+            </div>
+            <div id="product-container-footer">
+              <div id="product-value">
+                <p>Total: R$ 149,00</p>
+                <span>até 3x de R$ 49,90 sem juros</span>
+              </div>
+
+              <button >Finalizar compra</button>
+            </div>
+
+            </div>
+
+          </div>
+
+        </div>
       </div>
-    </div> 
-     
+
     </section>
   )
-  
+
 }
 export default Main;
 

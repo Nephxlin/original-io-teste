@@ -13,11 +13,17 @@
   margin: 0px;
 }
 
+  .footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .footer-content{
     grid-template-areas: unset;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    
+    justify-self: center;
     border: 2px solid var(--color-footer-line);
     margin: 0 auto;
     margin-top: 155px;
@@ -164,10 +170,9 @@
     background-color: var(--color-primary);
     display: flex;
     flex-direction: initial;
-    justify-self: center;
-    margin: 0 auto;
     height: 60px;
     max-width: 1280px;
+    align-self: center;
   }
   
   #footer-info p{
@@ -175,12 +180,13 @@
     align-self: center;
     color: var(--color-full-white);
     padding-left: 129px;
+
   }
   
   #footer-info img{
     padding-right: 92px;
     padding-left: 200px;
-    margin: 0;
+    margin: 0px;
 
     width: 111px;
     height: 25px;
