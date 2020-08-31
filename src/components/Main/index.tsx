@@ -48,6 +48,39 @@ function Main() {
     },
   ])
 
+  const [cardItems, setCardItems] = useState([
+    {
+      title: 'Rasteira Tira Dedo',
+      img: sandalsImg,
+      price: 'R$ 49,50',
+      quantity: 1
+    },
+    {
+      title: 'Bolsa',
+      img: bagImg,
+      price: 'R$ 120,50',
+      quantity: 9
+    },
+    {
+      title: 'Bolsa de Couro',
+      img: leatherBagImg,
+      price: 'R$ 25,50',
+      quantity: 3
+    },
+    {
+      title: 'Sandalia Cromada',
+      img: chromeSandalsImg,
+      price: 'R$ 29,50',
+      quantity: 2
+    },
+    {
+      title: 'Bolsa de Couro',
+      img: leatherBagImg,
+      price: 'R$ 25,50',
+      quantity: 6
+    },
+  ])
+
   function handleSelectColor(props: string, index: number) {
     for (let item in colorOptions) {
       colorOptions[item].selected = 'Disable'
@@ -122,10 +155,17 @@ function Main() {
     handleSelectSize(props, index)
   }
 
-  //Open Modal
+  //Open Modal 
   const [modal, setModal] = useState('modal-add-card-disable')
-  function HandleModal(props: string) {
+  function HandleModal(props: string) { 
     setModal(props)
+  }
+
+  //Open Modal Cart item
+  const [modalCart,setModalCart] = useState('modal-cart-content-disable')
+  function HandleModalCart(props: string) {
+    setModalCart(props)
+    setModal('modal-add-card-disable')
   }
 
 
@@ -199,6 +239,7 @@ function Main() {
                       key={index}
                       src={color.cor}
                       alt={color.name}
+                      onClick={() => handleSetColor(`${color.name}`, index)}
                     />
                   )
                 })}
@@ -244,126 +285,47 @@ function Main() {
               />
               <img id='product-photo' src={sandalsImg} alt="Sandals" />
               <h1>Produto adicionado com sucesso!</h1>
-              <button >Finalizar compra</button>
-              <span>Continuar Comprando</span>
+              <button onClick={()=> HandleModalCart('modal-cart-content')}>Finalizar compra</button>
+              <span onClick={() => HandleModal('modal-add-card-disable')}>Continuar Comprando</span>
             </div>
           </div>
 
-          <div className='modal-cart-content'>
+          {/* Modal ADD CART ITEM */}
+
+          <div className={modalCart}>
             <div id="modal-cart">
               <div id="cart-header">
                 <img
                   id='cart-close-icon'
                   src={closeIcon}
                   alt="Close-icon"
-                  onClick={() => HandleModal('modal-add-card-disable')}
+                  onClick={()=> HandleModalCart('modal-cart-content-disable')}
                 />
                 <h1>sacola</h1>
-                <span>5 items</span>
+                <span>{cardItems.length} Itens</span>
               </div>
 
               <div className="products-container">
-                <div className="cart-product">
-                  <div id="product-image">
-                    <img src={sandalsImg} alt="sandals" />
-                  </div>
-                  <div id="product-title">
-                    <h2>Rasteira Tira Dedo</h2>
-                    <strong>R$ 49,90 </strong>
-                  </div>
-                  <div id="product-quantity">
-                    <img src={subtract} alt="subtract" />
-                    <p>1</p>
-                    <img src={plus} alt="Plus" />  
-                  </div>
-                  <img src={removeIcon} alt="Remove Icon"/>
-              </div>
-
-              <div className="cart-product">
-                  <div id="product-image">
-                    <img src={bagImg} alt="sandals" />
-                  </div>
-                  <div id="product-title">
-                    <h2>Rasteira Tira Dedo</h2>
-                    <strong>R$ 49,90 </strong>
-                  </div>
-                  <div id="product-quantity">
-                    <img src={subtract} alt="subtract" />
-                    <p>1</p>
-                    <img src={plus} alt="Plus" />  
-                  </div>
-                  <img src={removeIcon} alt="Remove Icon"/>
-              </div>
-
-              <div className="cart-product">
-                  <div id="product-image">
-                    <img src={leatherBagImg} alt="sandals" />
-                  </div>
-                  <div id="product-title">
-                    <h2>Rasteira Tira Dedo</h2>
-                    <strong>R$ 49,90 </strong>
-                  </div>
-                  <div id="product-quantity">
-                    <img src={subtract} alt="subtract" />
-                    <p>1</p>
-                    <img src={plus} alt="Plus" />  
-                  </div>
-                  <img src={removeIcon} alt="Remove Icon"/>
-              </div>
-
-
-              <div className="cart-product">
-                  <div id="product-image">
-                    <img src={chromeSandalsImg} alt="sandals" />
-                  </div>
-                  <div id="product-title">
-                    <h2>Rasteira Tira Dedo</h2>
-                    <strong>R$ 49,90 </strong>
-                  </div>
-                  <div id="product-quantity">
-                    <img src={subtract} alt="subtract" />
-                    <p>1</p>
-                    <img src={plus} alt="Plus" />  
-                  </div>
-                  <img src={removeIcon} alt="Remove Icon"/>
-              </div>
-
-
-              <div className="cart-product">
-                  <div id="product-image">
-                    <img src={sandalsImg} alt="sandals" />
-                  </div>
-                  <div id="product-title">
-                    <h2>Rasteira Tira Dedo</h2>
-                    <strong>R$ 49,90 </strong>
-                  </div>
-                  <div id="product-quantity">
-                    <img src={subtract} alt="subtract" />
-                    <p>1</p>
-                    <img src={plus} alt="Plus" />  
-                  </div>
-                  <img src={removeIcon} alt="Remove Icon"/>
-              </div>
-
-              <div className="cart-product">
-                  <div id="product-image">
-                    <img src={sandalsImg} alt="sandals" />
-                  </div>
-                  <div id="product-title">
-                    <h2>Rasteira Tira Dedo</h2>
-                    <strong>R$ 49,90 </strong>
-                  </div>
-                  <div id="product-quantity">
-                    <img src={subtract} alt="subtract" />
-                    <p>1</p>
-                    <img src={plus} alt="Plus" />  
-                  </div>
-                  <img src={removeIcon} alt="Remove Icon"/>
-              </div>
-
-
-
-              
+              {cardItems.map((item , index)=>{
+                return(
+                  <div key={index} className="cart-product">
+                    <div id="product-image">
+                      <img src={item.img} alt="sandals" />
+                    </div>
+                    <div id="product-title">
+                      <h2>{item.title}</h2>
+                        <strong>{item.price}</strong>
+                    </div>
+                    <div id="product-quantity">
+                      <img src={subtract} alt="subtract" />
+                        <p>{item.quantity}</p>
+                      <img src={plus} alt="Plus" />  
+                    </div>
+                    <img src={removeIcon} alt="Remove Icon"/>
+                </div>
+                )
+              })}
+                          
                            
             </div>
             <div id="product-alert-promo">
@@ -375,7 +337,7 @@ function Main() {
                 <span>até 3x de R$ 49,90 sem juros</span>
               </div>
 
-              <button >Finalizar compra</button>
+              <button onClick={()=> HandleModalCart('modal-cart-content-disable')}>Finalizar compra</button>
             </div>
 
             </div>
