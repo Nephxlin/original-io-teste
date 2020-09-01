@@ -454,26 +454,8 @@ color: var(--color-footer-line);
     display: flex;
     align-items: center;
   }
-
-  .modal-cart-content button{
-    color: var(--color-full-white);
-    background-color: var(--color-button);
-    border-radius: 3px;
-    border: none;
-
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 20px;
-    text-transform: uppercase;
   
-    width: 235px;
-    height: 42px;
 
-    justify-self: center;
-    cursor: pointer;
-  }
   /* MODAL CART */
 
   .modal-cart-content-disable{
@@ -483,7 +465,7 @@ color: var(--color-footer-line);
   #modal-cart{
     width: 100%;
     min-width: 320px;
-    height: 500px;
+    max-height: 490px;
     background-color: white;
     display: flex;
     flex-direction: column;
